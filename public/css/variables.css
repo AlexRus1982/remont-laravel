@@ -1,0 +1,54 @@
+/*#region root vars*/
+:root {
+    --transition-normal: 0.3s;
+
+    --header-background-color: #000;
+
+    --footer-background-color: #F1F1F1;
+    
+    --accent-color: #F66;
+    --accent-add-color: #FEE863;
+
+    --font-normal-color: #000000;
+    --font-button-color: #FFFFFF;
+    
+    
+    --border-normal: 2px solid var(--border-color);
+    --border-normal-none: 2px solid var(--border-color-none);
+    --border-normal-accent: 2px solid var(--border-color-accent);
+
+    --border-normal-radius : 5px;
+    --border-middle-radius : 10px;
+    --border-large-radius  : 15px;
+
+    --button-shadow: 2px 2px 5px #0000007F;
+
+    --max-width-container: 1200px;
+    --max-width-container-01: 100px;
+    --max-width-container-02: 200px;
+    --max-width-container-03: 300px;
+    --max-width-container-04: 400px;
+    --max-width-container-05: 500px;
+    --max-width-container-06: 600px;
+    --max-width-container-07: 700px;
+    --max-width-container-08: 800px;
+    --max-width-container-09: 900px;
+    --max-width-container-10: 1000px;
+    --max-width-container-11: 1100px;
+}
+
+body {
+    background:
+    radial-gradient(#444 15%, transparent 16%) 0 0,
+    radial-gradient(#444 15%, transparent 16%) 16px 16px,
+    radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 2px,
+    radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 16px 18px;
+    background-color:#999;
+    background-size:32px 32px;
+}
+
+.popover-body {
+    user-select: none;
+}
+
+/*#endregion root vars*/

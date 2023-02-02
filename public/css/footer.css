@@ -1,0 +1,131 @@
+footer {
+    display: flex;
+    height: 70px;
+    width: 100%;
+    max-width: 1200px;
+    background-color: var(--header-background-color);
+    color: #FFFFFF;
+    align-items: center;
+    justify-content: center;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    background-color: var(--footer-background-color);
+    height: fit-content;
+    transition: var(--transition-normal);
+}
+
+footer.start {
+    transform: translateY(3000px);
+}
+
+.footer__container {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.logo-text {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.logo-text-main {
+    font-size: 25px;
+    font-weight: 900;
+    color: #000;
+    transform: scaleY(1.5);
+}
+
+.logo-text-after {
+    font-size: 10px;
+    font-weight: 600;
+    color: var(--accent-color);
+}
+
+.im {
+    width: 120px;
+}
+
+.c {
+    color: #525252;
+    text-align: start;
+}
+
+.stolbs {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.stolbs ul {
+    min-width: 150px;
+}
+
+.stolbs li {
+    list-style: none;
+}
+
+.stolbs ul:last-child {
+    min-width: fit-content;
+}
+
+.stb__head,
+.stb__item {
+    list-style-type: none;
+}
+
+.stb__head {
+    color: #525252;
+    font-size: 20px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.stb__head,
+.stb__item {
+    display: flex;
+}
+
+.stb__item {
+    color: #2b2b2b;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.stb__item:hover {
+    cursor: pointer;
+    /* text-shadow: 0px 0px 3px var(--accent-color1); */
+    color: var(--accent-color);
+}
+
+.stb__item.disable:hover {
+    cursor: auto;
+    color: #2B2B2B;
+}
+
+a.stb__item {
+    text-decoration: none;
+}
+
+.fot {
+    display: flex;
+    width: 100%;
+    background-color: var(--footer-background-color);
+    justify-content: space-between;
+}
+
+.social-icon {
+    transition: var(--transition-normal);
+}
+
+.social-icon:hover {
+    cursor: pointer;
+    color: var(--accent-color);
+}

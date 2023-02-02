@@ -1,0 +1,36 @@
+.preloader {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    background: #FFFFFFFF;
+    opacity: 1.0;
+    transform: scale(3.0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 1.0s;
+    z-index: 100000;
+}
+
+.preloader.off {
+    opacity: 0.0;
+    transform: scale(1.0);
+}
+
+.preloader svg {
+    animation-name: rotation;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes rotation {
+    0% {
+        transform:rotate(0deg);
+    }
+    100% {
+        transform:rotate(360deg);
+    }
+}

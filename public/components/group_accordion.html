@@ -1,0 +1,25 @@
+<div id="group-${groupName}" class="accordion-item">
+
+    <h2 class="accordion-header" id="heading-${groupName}">
+        <button class="fs-6 accordion-button collapsed p-2" type="button" data-bs-toggle="collapse" data-bs-target="#group-${groupName}-collapse" aria-expanded="false" aria-controls="group-${groupName}-collapse">
+            ${groupTitle}
+        </button>
+    </h2>
+
+    <div id="group-${groupName}-collapse" class="accordion-collapse collapse" aria-labelledby="group-${groupName}-heading">
+        <div class="accordion-body p-2">
+            <table class="table table-hover info-table" style="font-size: 12px;">
+                <thead class="table-light user-select-none">
+                    <tr>
+                        <th style="min-width: 85px; width: 85px;">ТС</th>
+                        <th style="text-align: center; max-width: 40px;">On/Off</th>
+                        <th>Геозона</th>
+                        <th style="max-width: 30px;">Статус</th>
+                    </tr>
+                </thead>
+                <tbody id="group-${groupName}-table" class="info-table-data info-table-data-groups"></tbody>
+            </table>
+        </div>
+    </div>
+
+</div>
