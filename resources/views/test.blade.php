@@ -13,69 +13,40 @@
     <body>
         Test page<br>
 
-        <div class="accordion" id="accordionPanelsStayOpenExample">
-            <?php
-                $columnNames = DB::getSchemaBuilder()
-                ->getColumnListing('catalog');
+        <?php
+            $categories = DB::table('categories')
+            ->get();
 
-                $counter = 0;
-                foreach ($columnNames as $columnName) {
-                    if (mb_strpos($columnName, 'Свойство: ') !== false) {
-                    
-                        ?>
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="panelsStayOpen-heading{{$counter}}">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse{{$counter}}" aria-expanded="false" aria-controls="panelsStayOpen-collapse{{$counter}}">
-                                        {{$columnName}}
-                                    </button>
-                                </h2>
-                                <div id="panelsStayOpen-collapse{{$counter}}" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading{{$counter}}">
-                                    <div class="accordion-body">
-                            <!-- <u><b>{{$columnName}}</b></u><br> -->
-                        <?
+            $sub_categories = DB::table('sub_categories')
+            ->get();
 
-                        $propertyArray = [];
-                        $properties = DB::table('catalog')
-                        ->select("{$columnName}")
-                        ->where([
-                            [$columnName, '<>', 'NULL'],
-                            [$columnName, '<>', ''],
-                        ])
-                        ->get();
-                
-                        foreach ($properties as $property) {
-                            $splitArray = explode(';', $property->{$columnName});
-                
-                            foreach ($splitArray as $splitProperty) {
-                                array_push($propertyArray, $splitProperty);
-                            }
-                        }
-                
-                        $propertyCollection = collect($propertyArray);
-                
-                        $uniqCollection = $propertyCollection->countBy();
+            $authors = DB::table('authors')
+            ->get();
 
-                        $valuesCounter = count($uniqCollection);
 
-                        foreach ($uniqCollection as $key=>$value) {
-                            ?>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                    <label class="form-check-label" for="flexCheckDefault">
-                                        {{$key}}
-                                    </label>
-                                </div>
-                            <?
-                        }
+            $categories->dump();
+            $sub_categories->dump();
+            $authors->dump();
 
-                        ?></div></div></div><?
+            $faker = Faker\Factory::create();
 
-                        $counter++;
-                    }
-                }
+            //for($i = 0; $i < 10; $i++)
+            //    DB::table('authors')
+            //    ->insert(['author_FIO' => $faker->name() ]);
+            //echo $faker->name();
+            //echo $faker->sentence($nbWords = 600, $variableNbWords = true);
 
-            ?>
-        </div>
+            //for($i = 0; $i < 10; $i++)
+            //    DB::table('offers')
+            //    ->insert([
+            //        'category_id' => $categories->random()->id,
+            //        'subcategory_id' => $sub_categories->random()->id,
+            //        'title' => $faker->sentence($nbWords = 6, $variableNbWords = true),
+            //        'description' => $faker->paragraph($nbSentences = 10, $variableNbSentences = true),
+            //        'author_id' => $authors->random()->id, 
+            //    ]);
+
+        ?>
     </body>
 
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>

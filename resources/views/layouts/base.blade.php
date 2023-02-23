@@ -20,7 +20,6 @@
 
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
 
-        <link href="/css/mobile.css" rel="stylesheet">
         <link href="/css/variables.css" rel="stylesheet">
         <link href="/css/footer.css" rel="stylesheet">
         <link href="/css/basket.css" rel="stylesheet">
@@ -49,9 +48,19 @@
         <div class="d-flex flex-column justify-content-between align-items-center min-vh-100 text-center" style="overflow: hidden;">
             @include('includes.header')
     
-            <main class="start d-flex flex-column flex-grow-1" style="background: #FDFAFE;"> 
+            <main class="d-flex flex-column flex-grow-1" style="background: #FDFAFE;"> 
                 @yield('content')
             </main>
+            <style>
+                main {
+                    transition: var(--transition-normal);
+                }
+
+                main.start {
+                    transform: scale(0);
+                    opacity: 0.0;
+                }
+            </style>
     
             @include('includes.footer')
         </div>
@@ -66,11 +75,11 @@
         <!-- preloader script -->
         <script>
             $(document).ready(function() { 
-                $('.preloader').addClass('off');
+                setTimeout(() => {
+                    $('.start').removeClass('start');
+                }, 0);
                 setTimeout(() => {
                     $('.preloader').remove();
-                    // $('.preloader svg').remove();
-                    $('.start').removeClass('start');
                 }, 1000);
             });
         </script>

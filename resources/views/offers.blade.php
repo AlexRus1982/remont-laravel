@@ -1,30 +1,34 @@
+<?php
+    $cookieUuid = Cookie::get('cookie-uuid');
+            
+    //$list = DB::table('wish_list')
+    //->where('cookie_uuid', $cookieUuid)
+    //->select('product_id')
+    //->get();
+    //
+    //$wishList = [];
+    //foreach ($list as $item) {
+    //    array_push($wishList, $item->product_id);
+    //}
+
+    //dd($offers);
+
+?>
+
 @extends('layouts.base')
 
-@section('page.title', 'Каталог товаров')
+@section('page.title', 'Каталог предложений')
 
 @section('content')
-    <?php
-        $cookieUuid = Cookie::get('cookie-uuid');
-                
-        $list = DB::table('wish_list')
-        ->where('cookie_uuid', $cookieUuid)
-        ->select('product_id')
-        ->get();
-        
-        $wishList = [];
-        foreach ($list as $item) {
-            array_push($wishList, $item->product_id);
-        }
-    ?>
 
-    @include('includes.products.filter')
-    @include('includes.products.sort')
+    {{-- @include('includes.offers.filter')
+    @include('includes.offers.sort') --}}
 
     <div class="container d-flex justify-content-start flex-wrap" style="max-width: 1200px;">
 
-        @include('includes.products.categories')
-        @include('includes.products.tags')
-        @include('includes.products.list', ['products' => $products])
+        {{-- @include('includes.offers.categories')
+        @include('includes.offers.tags') --}}
+        @include('includes.offers.list', ['offers' => $offers])
 
     </div>
 
@@ -46,24 +50,27 @@
 
         div.card:hover {
             cursor: pointer;
-            /* transform: scale(1.05) rotateZ(2deg); */
+            /*box-shadow: 0px 0px 16px var(--accent-color)!important;*/
+            background: #FEE86340;
+            /*color: #FFF;*/ 
+            transform: scale(1.05);
         }
         
         div.card:hover img {
             filter: grayscale(0.0);
         }
 
-        div.card:hover .wishButton,
-        div.card:hover .basketButton {
-            background-color: #0D6EFDAF;
+        .wishButton {
+            border: none;
         }
 
         .wishButton svg {
             transition: 0.3s;
+            border: none;
         }
 
         .wishButton:hover svg {
-            color: #FF0000;
+            color: var(--accent-color);
         }
 
         .wishButton svg:first-child {

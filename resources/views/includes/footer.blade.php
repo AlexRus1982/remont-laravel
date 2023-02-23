@@ -1,9 +1,9 @@
-<footer class="start py-3 d-flex flex-column px-5">
+<footer class="py-3 d-flex flex-column px-5">
     <div class="footer__container">
-        <div class="logo-text ms-3 py-3">
-            <div class="logo-text-main">ПОСЛЕ РЕМОНТА</div>
-            <div class="logo-text-after">найдётся всё</div>
-        </div>
+    <a class="logo-text ms-3" href="/" style="text-decoration: none;">
+        <div class="logo-text-main">ПОСЛЕ РЕМОНТА</div>
+        <div class="logo-text-after">найдётся всё</div>
+    </a>
 
         <ul class="ms-0 me-auto">
             <li class="stb__head">КАТАЛОГ</li>

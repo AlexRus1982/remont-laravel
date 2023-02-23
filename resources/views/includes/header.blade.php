@@ -1,4 +1,4 @@
-<nav class="navbar start px-3 py-0 w-100" style="user-select: none;">
+<nav class="navbar px-3 py-0 w-100" style="user-select: none;">
   <div><span class="me-2" style="color: #777;">Пн-Пт:</span><span>9:00 - 17:00</span></div>
   <div class="navbar-item ms-auto">Доставка и оплата</div>
   <div class="navbar-item">Гарантия</div>
@@ -40,11 +40,11 @@
   </div>
 </nav>
 
-<div class="sub-header start w-100 align-items-center" style="user-select: none;">
-  <div class="logo-text ms-3">
+<div class="sub-header w-100 align-items-center" style="user-select: none;">
+  <a class="logo-text ms-3" href="/" style="text-decoration: none;">
     <div class="logo-text-main">ПОСЛЕ РЕМОНТА</div>
     <div class="logo-text-after">найдётся всё</div>
-  </div>
+  </a>
 
   <div class="catalog-button-wrapper ms-4 d-flex align-items-center" style="margin-top: 7px;">
     <div class="dropdown">
@@ -65,7 +65,7 @@
       </div>
 
       <div class="dropdown-menu px-3 mt-2 shadow">
-        <li class="stb__item">Все</li>
+        <a href="/offers"><li class="stb__item">Все</li></a>
         <li class="stb__item">Купить</li>
         <li class="stb__item">Продать</li>
         <li class="stb__item">Смеси</li>
@@ -87,9 +87,9 @@
 
   <div class="login-info" style="height: 30px;">
     
-    <span class="px-3" id="basket-icon">
-      <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" fill="currentColor" class="bi bi-cart3" viewBox="0 0 16 16">
-        <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+    <span class="px-3" id="wished-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+        <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
       </svg>
     </span>
 
@@ -195,13 +195,13 @@
     color: #FFF;
   }
 
-  #basket-icon,
+  #wished-icon,
   #login-icon {
     color: #000;
     transition: var(--transition-normal);
   }
 
-  #basket-icon:hover ,
+  #wished-icon:hover ,
   #login-icon:hover {
     cursor: pointer;
     color: var(--accent-color);
@@ -230,5 +230,9 @@
 
   .catalog-button-icon svg:focus {
     outline: none;
+  }
+
+  .dropdown-menu a {
+    text-decoration: none;
   }
 </style>

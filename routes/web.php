@@ -3,7 +3,10 @@
 #region main requests
 Route::get('/', 'Products@showMain')->name('main');
 
-Route::get('/products', 'Products@showAll')->name('products');
+Route::get('/offers', 'OffersController@showAll')->name('offers');
+
+Route::get('/offers/{id}', 'OffersController@showOffer')->name('offers.showOffer');
+
 Route::get('/products/{url}', 'Products@showCategory')->name('category');
 Route::get('/tags/{url}', 'Products@showTags')->name('products.tags');
 
@@ -31,7 +34,6 @@ Route::get('/test', function() {
     $uuid = ($cookieUuid != '') ? $cookieUuid : (string) Str::uuid();
     Config::set('cookie-uuid', $uuid);
 
-    // $cookie = Cookie::make('hagi-vagi-uuid', $uuid, 2 /* $minutes = 60 * 24 * 365 * 10; // 10 years */);
     return response()->view('test')->cookie('cookie-uuid', Config::get('cookie-uuid'), 1);
 })->name('test');
 #endregion

@@ -7,7 +7,7 @@ $mysql = [
     'url' => env('DATABASE_URL'),
     'host' => 'localhost',
     'port' => '3306',
-    'database' => 'internet-magazin',
+    'database' => 'after_remont',
     'username' => 'root',
     'password' => '',
     'unix_socket' => '' /*env('DB_SOCKET', '')*/,
@@ -25,9 +25,9 @@ $mysql = [
 $server = strtolower($_SERVER['DOCUMENT_ROOT']);
 if (strpos($server, "openserver") == false && $server != ""){
     $mysql['host']     = 'localhost';
-    $mysql['database'] = 'smit215b_im';
-    $mysql['username'] = 'smit215b_im';
-    $mysql['password'] = 'Zz654321';
+    $mysql['database'] = 'alexamut_remont';
+    $mysql['username'] = 'alexamut_remont';
+    $mysql['password'] = 'r_123456789';
 }
 
 return [

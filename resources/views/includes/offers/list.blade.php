@@ -1,8 +1,8 @@
-@if (count($products) > 0)
+@if (count($offers) > 0)
     {{-- 
         <!-- <div class="d-flex flex-row w-100 fs-4 mt-0 mb-1 fw-bold">Каталог</div>  -->
     --}}
-    <div class="d-flex flex-row w-100 justify-content-between">
+    {{-- <div class="d-flex flex-row w-100 justify-content-between">
         <div class="filter-list-wrapper d-flex flex-row"> 
             <div class="filter-list-icon-button me-2 text-danger">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-sliders2-vertical" viewBox="0 0 16 16">
@@ -36,16 +36,16 @@
                 cursor: pointer;
             }
         </style>
-    </div> 
+    </div>  --}}
 
-    <div class="d-flex flex-row w-100 justify-content-start flex-wrap pb-3">
-        @foreach($products as $key=>$value)
-            @include('includes.products.card', ['value' => $value])
+    <div class="d-flex flex-row w-100 justify-content-center flex-wrap pb-3">
+        @foreach($offers as $key=>$value)
+            @include('includes.offers.card', ['value' => $value])
         @endforeach
     </div>
 
     <div class="py-4">
-        {{ $products->appends(['products' => request()->products])->links() }}
+        {{ $offers->appends(['offers' => request()->offers])->links() }}
     </div>
 
 @endif

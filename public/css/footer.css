@@ -78,6 +78,7 @@ footer.start {
 .stb__head,
 .stb__item {
     list-style-type: none;
+    text-decoration: none;
 }
 
 .stb__head {
