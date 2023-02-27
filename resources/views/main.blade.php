@@ -19,7 +19,7 @@
 @endsection
 
 @push('js')
-    <script type="text/javascript" src="/js/products.js"></script>
+    <script type="text/javascript" src="/public/js/products.js"></script>
     <style>
         div.card {
             transition: 0.3s;

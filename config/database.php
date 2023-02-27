@@ -23,7 +23,7 @@ $mysql = [
 ];
 
 $server = strtolower($_SERVER['DOCUMENT_ROOT']);
-if (strpos($server, "openserver") == false && $server != ""){
+if (strpos($server, "ospanel") == false && $server != ""){
     $mysql['host']     = 'localhost';
     $mysql['database'] = 'alexamut_remont';
     $mysql['username'] = 'alexamut_remont';

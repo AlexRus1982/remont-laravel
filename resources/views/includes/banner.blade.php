@@ -1,5 +1,5 @@
 <div class="banner{{--start--}}">
-    <div class="banner__image"><img src="/images/original.webp"></div>
+    <div class="banner__image"><img src="/public/images/original.webp"></div>
     {{-- <div class="banner__text">Купить или продать вещи после ремонта</div> --}}
     <div class="banner__text">Платформа покупки/продажи вещей после ремонта</div>
 </div>

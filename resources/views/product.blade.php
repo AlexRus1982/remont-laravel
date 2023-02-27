@@ -44,7 +44,7 @@
 @endsection
 
 @push('js')
-    <script type="text/javascript" src="/js/product.js"></script>
+    <script type="text/javascript" src="/public/js/product.js"></script>
     <style>
         #carouselExampleControls.start {
             transition: 0.0s;
