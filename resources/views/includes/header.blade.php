@@ -44,10 +44,7 @@
 </nav>
 
 <div class="sub-header w-100 align-items-center" style="user-select: none;">
-  <a class="logo-text ms-3" href="/" style="text-decoration: none;">
-    <div class="logo-text-main">ПОСЛЕ РЕМОНТА</div>
-    <div class="logo-text-after">найдётся всё</div>
-  </a>
+  @include('includes.logo')
 
   <div class="catalog-button-wrapper ms-4 d-flex align-items-center" style="margin-top: 7px;">
     <div class="dropdown">
