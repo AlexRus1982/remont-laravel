@@ -18,3 +18,23 @@ window.utils = new Utils();
 //   var match = document.cookie.match(new RegExp("(^| )" + name + "=([^;]+)"));
 //   if (match) return match[2];
 // };
+
+class Auth {
+
+    constructor(){
+        console.log(this.constructor.name);
+        this.MakeKeys();
+    }
+
+    MakeKeys() {
+        $('#login-icon').on('click', () => {
+            $('#authModal').modal('show');
+        });
+
+        $('#logout-icon').on('click', () => {
+            window.location.href = "/logout";
+        });
+    }
+}
+
+new Auth();

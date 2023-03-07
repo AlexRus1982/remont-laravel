@@ -8,6 +8,8 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Cookie;
 use Illuminate\Support\Facades\Config;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Str;
 
 
@@ -27,6 +29,12 @@ class Products extends Controller
         return response()
         ->view('main')
         ->cookie('cookie-uuid', Config::get('cookie-uuid'), Products::cookieUuidLifeTime);
+    }
+
+    public function logout(){
+        Session::flush();
+        Auth::logout();
+        return redirect('/');
     }
 
     public function showAll(Request $request){

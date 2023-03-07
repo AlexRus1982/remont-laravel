@@ -12,6 +12,11 @@
         <!-- Cookie uuid для идентификации просмотренных товаров и списка желаний -->
         <meta name="cookie-uuid" content="{{ Config::get('cookie-uuid') }}">
 
+        @auth
+            <!-- Логин -->
+            <meta name="login-name" content="{{ Auth::user()->name }}">
+        @endauth
+
         <link href="/public/css/preloader.css" rel="stylesheet">
 
         <link rel="icon" href="/public/images/favicon.ico" type="image/x-icon">
