@@ -21,14 +21,19 @@
             PDO::MYSQL_ATTR_SSL_CA => env('MYSQL_ATTR_SSL_CA'),
         ]) : [],
     ];
+    
+    $mysql['host']     = '37.140.192.71';
+    $mysql['database'] = 'u1088761_remont';
+    $mysql['username'] = 'u1088761_alex';
+    $mysql['password'] = 'Aa_1234567';
 
-    $server = strtolower($_SERVER['DOCUMENT_ROOT']);
-    if (strpos($server, "ospanel") == false && $server != ""){
-        $mysql['host']     = 'localhost';
-        $mysql['database'] = 'alexamut_remont';
-        $mysql['username'] = 'alexamut_remont';
-        $mysql['password'] = 'r_123456789';
-    }
+    // $server = strtolower($_SERVER['DOCUMENT_ROOT']);
+    // if (strpos($server, "ospanel") == false && $server != ""){
+    //     $mysql['host']     = 'localhost';
+    //     $mysql['database'] = 'alexamut_remont';
+    //     $mysql['username'] = 'alexamut_remont';
+    //     $mysql['password'] = 'r_123456789';
+    // }
 
     return [
 
